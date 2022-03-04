@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+    padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wheel-of-fortune {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 800;
+}
+
+.wheel-of-fortune__container {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: #e5b598;
+}
+
+.wheel-of-fortune__segment {
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 100%;
+}
+
+.wheel-of-fortune__segment:nth-child(even) {
+    background: #e5b598;
+}
+
+.wheel-of-fortune__segment:nth-child(odd) {
+    background: #cae9c8;
+}
+
+.wheel-of-fortune__arrow {
+    position: absolute;
+    top: 50%;
+    left: 97%;
+    z-index: 2;
+    margin: -12px 0 0 -13px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22.5px 47px 22.5px 0;
+    border-color: transparent #000 transparent transparent;
+}
+
+.wheel-of-fortune__label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0 100%;
+}
+
+.wheel-of-fortune__label-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    margin-left: -5px;
+    padding-left: 25px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    text-align: center;
+}
+
+.back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    box-shadow: 0 0 10px black;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
